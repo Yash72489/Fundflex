@@ -1,6 +1,6 @@
 import { GoArrowRight } from "react-icons/go";
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
-
+import { SlArrowDown } from "react-icons/sl";
 
 function MainContent() {
   const featureCards = [
@@ -27,9 +27,7 @@ function MainContent() {
       pt1: "Monitor investment performance",
       pt2: "Visualize your financial data",
       pt3: "Spending patterns and identify trends",
-    }
-     
-   
+    },
   ];
   const wrapperCard = [
     {
@@ -75,7 +73,35 @@ function MainContent() {
       passion: "CYBERLEAPS",
     },
   ];
-   
+
+  const Faq = [
+    {
+      question: " How is secured my financial data?",
+      answer:
+        "Yes, you can access your financial data from any device with an internet connection. Simply log in to your account to view your information from anywhere, at any time",
+    },
+    {
+      question: " Can I access my financial data from multiple device?",
+      answer:
+        "Yes, you can access your financial data from any device with an internet connection. Simply log in to your account to view your information from anywhere, at any time.",
+    },
+    {
+      question: " Is customer support available if I need assistance?",
+      answer:
+        "Yes, you can access your financial data from any device with an internet connection. Simply log in to your account to view your information from anywhere, at any time.",
+    },
+    {
+      question: " Is there a free trail available?",
+      answer:
+        "Yes, you can access your financial data from any device with an internet connection. Simply log in to your account to view your information from anywhere, at any time.",
+    },
+    {
+      question: "Can I customizes the catogories for my transaction?",
+      answer:
+        "Yes, you can access your financial data from any device with an internet connection. Simply log in to your account to view your information from anywhere, at any time.",
+    },
+  ];
+
   return (
     <main>
       <div className="main-content">
@@ -236,16 +262,29 @@ function MainContent() {
       </div>
       <div className="faq">
         <div className="faq-text">
-          <span>
-           Got Questions?
-           We've Got Answers!
-          </span>
+          <span>Got Questions? We've Got Answers!</span>
           <p>
             Effortlessly Track, Manage, and Optimize Your Personal and Business
             Finances. Your Comprehensive Companion.
           </p>
         </div>
-        <div className="faq-main"></div>
+        <div className="faq-main">
+          {Faq.map((ask, index) => (
+            <div className="faq-box" key={index}>
+              <div className="faq-question">
+                <div className="faq-ques">
+                  {index + 1}.{ask.question}
+                </div>
+                <div className="icon-faq">
+               <SlArrowDown className="icon-drop-faq" />
+                </div>
+              </div>
+              <div className="faq-answer">
+                <p>{ask.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
