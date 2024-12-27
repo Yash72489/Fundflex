@@ -9,7 +9,7 @@ main {
   position: relative;
   left: 19vw;
   gap: 180px;
-  border: 1px solid black;
+
 
   .financial-text {
     display: flex;
@@ -84,7 +84,7 @@ main {
   position: relative;
   left: 19vw;
   margin-top: 90px;
-  border: 1px solid black;
+
 
   .company-text {
     font-size: 16px;
@@ -112,7 +112,7 @@ main {
   position: relative;
   left: 19vw;
   margin-top: 90px;
-  border: 1px solid black;
+
 
   .feature-text {
     display: flex;
@@ -186,7 +186,7 @@ main {
   left: 19vw;
   gap: 150px;
   margin-top: 90px;
-  border: 1px solid black;
+
 
   .finance-img {
     .cycle {
@@ -194,12 +194,23 @@ main {
       position: absolute;
       left: 460px;
 
+      img {
+        width: 100%;
+      animation: spin 14s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+      
+        100% {
+          transform: rotate(360deg);
+        }
+      }
     }
 
-    img {
-      width: 100%;
-
-    }
+    
   }
 
   img {
@@ -242,7 +253,7 @@ main {
   left: 19vw;
   gap: 90px;
   margin-top: 120px;
-  border: 1px solid black;
+
 
   .transaction-text {
     display: flex;
@@ -409,7 +420,7 @@ main {
   left: 19vw;
   gap: 20px;
   margin-top: 120px;
-  border: 1px solid black;
+ 
 
   .faq-text {
     display: flex;
@@ -419,15 +430,15 @@ main {
     line-height: 1.4;
 
     span {
-  display: flex;
-    justify-content: center;
-    font-size: 48px;
-    font-weight: 500;
-    width: 477px;
-    text-align: center;
-    position: relative;
-    left: 369px;
-    line-height: 1.1;
+      display: flex;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: 500;
+      width: 477px;
+      text-align: center;
+      position: relative;
+      left: 369px;
+      line-height: 1.1;
     }
 
     p {
@@ -440,47 +451,128 @@ main {
   }
 
   .faq-main {
-max-height: 1036px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 20px;
-  line-height: 1.4;
-  width: 736px;
-  position: relative;
-  left: 260px;
+    max-height: 1036px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    line-height: 1.4;
+    width: 736px;
+    position: relative;
+    left: 260px;
 
     .faq-box {
       display: flex;
-        justify-content: center;
-     
-        flex-direction: column;
+      justify-content: center;
+
+      flex-direction: column;
 
       .faq-question {
-  display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 666px;
-    gap: 85px;
-  padding: 30px;
-    border-bottom: 1px solid rgb(226, 226, 226);
-        .faq-ques{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 666px;
+        gap: 85px;
+        padding: 30px;
+        border-bottom: 1px solid rgb(226, 226, 226);
+
+        .faq-ques {
           font-size: 20px;
-            font-weight: 500;
-            width: 560px;
+          font-weight: 500;
+          width: 560px;
         }
       }
 
       .faq-answer {
-        display: block;
+        display: none;
         background-color: #fafafa00;
-          border-radius: 24px;
-          padding-left: 46px;
-         p{
+        border-radius: 24px;
+        padding-left: 46px;
+
+        p {
           font-size: 16px;
-            color: #939393;
-         }
+          color: #939393;
+        }
       }
     }
   }
+}
+
+.tranform-experience {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  position: relative;
+  left: 19vw;
+  margin-top: 120px;
+
+
+  .transform-container {
+    display: flex;
+    background-color: #ecfaff;
+    border-radius: 24px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 55px 55px 55px 50px;
+
+    .tranform-1 {
+    width: 56%;
+      line-height: 2;
+
+      span {
+        font-size: 48px;
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: 16px;
+        color: #8d8d8d;
+        line-height: 1.2;
+      }
+
+      button {
+
+        background-color: #131212;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 20px;
+        font-size: 16px;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .tranform-2 {
+      text-align: end;
+
+      .img-round {
+        position: absolute;
+        top: 80px;
+        left: 340px;
+
+        img {
+          width: 38%;
+          animation: spin 15s linear infinite;
+        }
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+
+    img {
+      width: 65%;
+    }
+  }
+
 }

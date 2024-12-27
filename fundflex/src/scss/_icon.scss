@@ -1,20 +1,27 @@
-.icon-drop{
+.icon-drop {
     font-size: 10px;
     margin-left: 10px;
     transition: all ease 0.3s;
-    &:hover{
+
+    &:hover {
         color: rgb(122, 122, 122);
         transform: rotate(180deg);
         transition: all ease 0.3s;
     }
 }
-.tick-icon{
-font-size: 20px;
-color: #ce7bfc;
+
+.tick-icon {
+    font-size: 20px;
+    color: #ce7bfc;
 }
-.icon-drop-faq{
-font-size: 8px;
+
+.tick-icon-black {
+    font-size: 25px;
+    color: black;
+}
+
+.icon-drop-faq {
+    font-size: 8px;
     color: black;
     font-weight: bold;
 }
-

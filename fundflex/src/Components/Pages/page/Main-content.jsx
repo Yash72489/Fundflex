@@ -1,6 +1,7 @@
 import { GoArrowRight } from "react-icons/go";
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
 import { SlArrowDown } from "react-icons/sl";
+import {img,imgRound} from "../../../assets/jpg";
 
 function MainContent() {
   const featureCards = [
@@ -102,6 +103,14 @@ function MainContent() {
     },
   ];
 
+  const transform = [
+    {
+      ques: "Ready to Transform Your Experience?",
+      ans: "Get Started Now and Explore New Possibilities with Our Comprehensive Resources.",
+      btn:'Get Started now'
+    },
+  ];
+
   return (
     <main>
       <div className="main-content">
@@ -198,7 +207,7 @@ function MainContent() {
                 </li>
                 <li>
                   <IoCheckmarkCircleSharp className="tick-icon" />
-                  &nbsp; {finance.pt2}
+                  &nbsp;{finance.pt2}
                 </li>
                 <li>
                   <IoCheckmarkCircleSharp className="tick-icon" />
@@ -276,7 +285,7 @@ function MainContent() {
                   {index + 1}.{ask.question}
                 </div>
                 <div className="icon-faq">
-               <SlArrowDown className="icon-drop-faq" />
+                  <SlArrowDown className="icon-drop-faq" />
                 </div>
               </div>
               <div className="faq-answer">
@@ -284,6 +293,30 @@ function MainContent() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="tranform-experience">
+        <div className="transform-container">
+          <div className="tranform-1" key={transform}>
+            {transform.map((experience) => (
+              <>
+                <span>{experience.ques}</span>
+                <p>{experience.ans}</p>
+                <button>
+                  {experience.btn}
+                  <GoArrowRight className="icon-arrow" />
+                </button>
+              </>
+            ))}
+          </div>
+          <div className="tranform-2">
+           <>
+           <div className="img-round">
+            <img src={imgRound} alt="rotation-img" />
+           </div>
+           <img src={img} alt="experience" />
+           </>
+          </div>
         </div>
       </div>
     </main>

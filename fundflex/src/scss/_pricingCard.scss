@@ -1,0 +1,155 @@
+.Pricing-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    position: relative;
+    gap: 10px;
+    left: 19vw;
+    margin-top: 180px;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        font-size: 72px;
+        font-weight: 600;
+        line-height: 115%;
+        display: flex;
+        justify-content: center;
+    }
+
+    p {
+        text-align: center;
+        width: 60%;
+        margin-bottom: 0;
+        font-size: 18px;
+        line-height: 160%;
+        opacity: .8;
+    }
+
+    .toggle-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 15px;
+        margin-top: 40px;
+
+        button {
+            border: 0.5px solid rgb(226, 221, 221);
+            padding: 5px 15px;
+            background-color: white;
+            border-radius: 15px;
+
+            .circle {
+                width: 17px;
+                    background-color: rgb(60, 60, 220);
+                    border-radius: 150%;
+                    position: relative;
+                    left: -10px;
+            }
+        }
+    }
+
+    .container-outer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 50px;
+        gap: 25px;
+
+        .pricing-item {
+            width: 315px;
+            display: flex;
+            flex-direction: column;
+            padding: 33px;
+            line-height: 1.8;
+
+            border-radius: 40px;
+
+            .plan {
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            .for {
+                font-size: 16px;
+                opacity: 0.8;
+            }
+
+            .inner-container {
+
+                width: 305px;
+                padding: 20px;
+                line-height: 1.6;
+                background-color: #fff;
+                border-radius: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                margin-top: 30px;
+                position: relative;
+                left: -17px;
+                top: 15px;
+
+                .price {
+                    font-size: 36px;
+                    font-weight: 500;
+                }
+
+                .per-time {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 160%;
+                    position: relative;
+                    left: 10px;
+                }
+
+                .line-in {
+                    width: 280px;
+                    background-color: #dcdcdc;
+                    height: 1px;
+                    margin-top: 20px;
+                }
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    position: relative;
+                    left: -40px;
+                    margin-top: 30px;
+
+                    li {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                }
+
+                button {
+                    border-radius: 100px;
+                    padding: 12px 30px;
+                    transition: background-color .5s;
+                    background-color: black;
+                    color: #fff;
+                    font-size: 18px;
+                    border: none;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .purple {
+            background-color: #eadeff;
+        }
+
+        .orange {
+            background-color: #ffdede;
+        }
+
+        .blue {
+            background-color: #defaff;
+        }
+    }
+
+}
